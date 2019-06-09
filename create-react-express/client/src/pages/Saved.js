@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import API from "../utils/API";
+import {dbAPI} from "../utils/API";
 
 
 class Saved extends Component {
@@ -9,7 +9,7 @@ class Saved extends Component {
     };
 
     componentDidMount() {
-        API.dbAPI.getSavedBooks(this.setSavedBooks)
+        dbAPI.getSavedBooks(this.setSavedBooks)
     }
 
     setSavedBooks = books => {

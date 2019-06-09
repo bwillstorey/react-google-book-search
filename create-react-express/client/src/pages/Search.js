@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import API from "../utils/API";
+import {googleAPI} from "../utils/API";
 import SearchForm from "../components/SearchForm";
 import SearchResults from "../components/SearchResults";
 
@@ -24,7 +24,7 @@ class Search extends Component {
 
     handleFormSubmit = event => {
         event.preventDefault();
-        API.googleAPI.searchBooks(this.state.input, this.state.selectedOption, this.updateResults)
+        googleAPI.searchBooks(this.state.input, this.state.selectedOption, this.updateResults)
     }
 
     updateResults = results => {
