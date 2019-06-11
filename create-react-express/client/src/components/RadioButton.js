@@ -3,15 +3,15 @@ import React from "react";
 const RadioButton = ({
     value,
     selectedOption,
-    handleChange
+    handleFormSubmit
 }) => {
     return(
         <label>
             <input
                 type="radio"
-                value={value}
+                // value={value}
                 checked={value === selectedOption}
-                onChange={handleChange}
+                onChange={handleFormSubmit}
             />
             {value}
         </label>

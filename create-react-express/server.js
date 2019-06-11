@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
@@ -5,7 +6,8 @@ const app = express();
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 
-mongoose.connect("mongodb://localhost/googlebooks", { useNewUrlParser: true });
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/googlebooks";
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 // Define middleware here
 app.use(bodyParser.urlencoded({ extended: true })); //true or false?

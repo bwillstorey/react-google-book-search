@@ -22,13 +22,13 @@ class Search extends Component {
         this.setState({ selectedOption: event.target.value })
     }
 
+    updateResults = results => {
+        this.setState({ results, searched: true });
+    }
+
     handleFormSubmit = event => {
         event.preventDefault();
         googleAPI.searchBooks(this.state.input, this.state.selectedOption, this.updateResults)
-    }
-
-    updateResults = results => {
-        this.setState({ results, searched: true });
     }
 
     componentWillMount() {
@@ -40,7 +40,7 @@ class Search extends Component {
             <div>
                 <h1>Search</h1>
                 <SearchForm
-                    inputValue={this.state.input}
+                    input={this.state.input}
                     radioButtons={this.state.radioButtons}
                     handleTextChange={this.state.handleTextChange}
                     handleRadioChange={this.state.handleRadioChange}

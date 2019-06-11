@@ -2,7 +2,7 @@ import React from "react";
 import RadioButton from "./RadioButton";
 
 const SearchForm = ({
-    inputValue,
+    input,
     radioButtons,
     handleTextChange,
     handleRadioChange,
@@ -25,7 +25,7 @@ const SearchForm = ({
             <input 
                 type="text"
                 onChange={handleTextChange}
-                value={inputValue}
+                value={input}
             />
         </label>
 
