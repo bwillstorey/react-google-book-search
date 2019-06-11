@@ -39,7 +39,7 @@ class Search extends Component {
             link: link,
             image: image
         })
-            .then(res => console.log("Book saved\n", res))
+            .then(res => console.log("Book saved", res))
             .catch(err => console.log(err));
     }
 
