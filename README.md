@@ -8,7 +8,7 @@
 - Live Demo: https://mysterious-mountain-90471.herokuapp.com/
 
 ## About
-A Google Books search interface, connected to a database where users can find books, preview them and add or remove them to a collection.
+A Google Books React Application with a search interface connected to a database where users can find books, preview them and add or remove them from a collection.
 
 ## Contributing Guidelines
 All contributions and suggestions are welcome! For direct contributions, please fork the repository and file a pull request.
